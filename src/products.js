@@ -1,8 +1,15 @@
+import oysters from './assets/images/1.png'
+import oystersBig from './assets/images/1_big.png'
+import ribs from './assets/images/2.png'
+import ribsBig from './assets/images/2_big.png'
+import shrimps from './assets/images/3.png'
+import shrimpsBig from './assets/images/3_big.png'
+
 export const products = [
   {
     id: 1,
-    url: '/images/1.png',
-    urlBig: '/images/1_big.png',
+    url: oysters,
+    urlBig: oystersBig,
     imgDescription: 'Блюдо из устриц на тарелке черного цвета.',
     title: 'Устрицы по-рокфеллеровски',
     description: 'Значимость этих проблем настолько очевидна, что укрепление и развитие структуры',
@@ -13,8 +20,8 @@ export const products = [
   },
   {
     id: 2,
-    url: '/images/2.png',
-    urlBig: '/images/2_big.png',
+    url: ribs,
+    urlBig: ribsBig,
     imgDescription: 'Блюдо из свиных ребрышек на гриле с зеленью на тарелке черного цвета.',
     title: 'Свиные ребрышки на гриле с зеленью',
     description: 'Не следует, однако забывать, что реализация намеченных плановых',
@@ -24,8 +31,8 @@ export const products = [
   },
   {
     id: 3,
-    url: '/images/3.png',
-    urlBig: '/images/3_big.png',
+    url: shrimps,
+    urlBig: shrimpsBig,
     imgDescription: 'Блюдо из креветок с кусочками лимона на тарелке черного цвета.',
     title: 'Креветки по-королевски в лимонном соке',
     description: 'Значимость этих проблем настолько очевидна, что укрепление и развитие структуры обеспечивает широкому кругу',
@@ -35,8 +42,8 @@ export const products = [
   },
   {
     id: 4,
-    url: '/images/1.png',
-    urlBig: '/images/1_big.png',
+    url: oysters,
+    urlBig: oystersBig,
     imgDescription: 'Блюдо из устриц на тарелке черного цвета.',
     title: 'Устрицы по-рокфеллеровски',
     description: 'Значимость этих проблем настолько очевидна, что укрепление и развитие структуры',
@@ -46,8 +53,8 @@ export const products = [
   },
   {
     id: 5,
-    url: '/images/1.png',
-    urlBig: '/images/1_big.png',
+    url: oysters,
+    urlBig: oystersBig,
     imgDescription: 'Блюдо из устриц на тарелке черного цвета.',
     title: 'Устрицы по-рокфеллеровски',
     description: 'Значимость этих проблем настолько очевидна, что укрепление и развитие структуры',
@@ -57,8 +64,8 @@ export const products = [
   },
   {
     id: 6,
-    url: '/images/2.png',
-    urlBig: '/images/2_big.png',
+    url: ribs,
+    urlBig: ribsBig,
     imgDescription: 'Блюдо из свиных ребрышек на гриле с зеленью на тарелке черного цвета.',
     title: 'Свиные ребрышки на гриле с зеленью',
     description: 'Не следует, однако забывать, что реализация намеченных плановых',
@@ -68,8 +75,8 @@ export const products = [
   },
   {
     id: 7,
-    url: '/images/3.png',
-    urlBig: '/images/3_big.png',
+    url: shrimps,
+    urlBig: shrimpsBig,
     imgDescription: 'Блюдо из креветок с кусочками лимона на тарелке черного цвета.',
     title: 'Креветки по-королевски в лимонном соке',
     description: 'Значимость этих проблем настолько очевидна, что укрепление и развитие структуры обеспечивает широкому кругу',
@@ -79,8 +86,8 @@ export const products = [
   },
   {
     id: 8,
-    url: '/images/1.png',
-    urlBig: '/images/1_big.png',
+    url: oysters,
+    urlBig: oystersBig,
     imgDescription: 'Блюдо из устриц на тарелке черного цвета.',
     title: 'Устрицы по-рокфеллеровски',
     description: 'Значимость этих проблем настолько очевидна, что укрепление и развитие структуры',
