@@ -1,0 +1,55 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat Regular', sans-serif;
+  background-color: #161516;
+}
+
+button {
+  cursor: pointer;
+}
+
+input, button {
+  font-family: inherit;
+}
+
+input::placeholder,
+input::-webkit-input-placeholder {
+  color: #ccc;
+  opacity: 1;
+}
+
+input:focus,
+button:focus {
+  outline: none;
+  border-color: yellow;
+}
+
+button:focus {
+  outline: 1px solid yellow;
+}
+
+a:focus {
+  outline-color: yellow;
+}
+
+.error {
+  font-family: 'Montserrat Light';
+  font-size: 8px;
+  line-height: 10px;
+  color: #FF0B0B;
+}
+
+.error_common {
+  position: absolute;
+  top: 24px;
+  left: 152px;
+}
+
+.error_input {
+  position: absolute;
+  left: 18px;
+  bottom: 4px;
+}

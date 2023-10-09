@@ -1,0 +1,39 @@
+body {
+  cursor: default;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: inherit;
+}
+
+input,
+button {
+  font-family: inherit;
+}
+
+input::placeholder,
+input::-webkit-input-placeholder {
+  color: #ccc;
+  opacity: 1;
+}
+
+input:focus,
+button:focus {
+  outline: none;
+  border-color: #D58C51;
+}
+
+a:focus {
+  outline-color: #D58C51;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  border: none;
+}

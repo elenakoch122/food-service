@@ -1,0 +1,28 @@
+.button {
+  width: 200px;
+  padding: 12px 0;
+  font-family: 'Montserrat Regular';
+  font-size: 14px;
+  line-height: 17px;
+  transition: .3s;
+}
+
+.button_orange {
+  color: #131313;
+  background-color: #D58C51;
+}
+
+.button_orange:hover {
+  color: #fff;
+}
+
+.button_transparent {
+  color: #D58C51;
+  background-color: transparent;
+  border: 1px solid #D58C51;
+}
+
+.button_transparent:hover {
+  color: #fff;
+  border-color: #fff;
+}

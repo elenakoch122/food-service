@@ -1,0 +1,30 @@
+.buttonRound {
+  padding: 8px;
+  line-height: 0;
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid;
+  border-radius: 50%;
+  transition: .3s;
+}
+
+.buttonRound:hover > svg path {
+  stroke: #fff;
+}
+
+.buttonRound_orange {
+  border-color: #D58C51;
+}
+
+.buttonRound_orange:hover {
+  border-color: #fff;
+}
+
+.buttonRound_white {
+  border-color: #fff;
+}
+
+.buttonRound_white:hover {
+  border-color: #D58C51;
+  background-color: #D58C51;
+}

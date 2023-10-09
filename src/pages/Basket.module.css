@@ -1,0 +1,57 @@
+.basket__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 53px 70px 38px;
+}
+
+.basket__wrapper {
+  width: 860px;
+  margin: 0 auto;
+}
+
+.basket__title {
+  flex: 1;
+  margin-left: 63px;
+  font-family: 'Montserrat Bold';
+  font-size: 31px;
+  line-height: 38px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.basket__content {
+  height: calc(100vh - 320px);
+  margin-bottom: 102px;
+  overflow-y: scroll;
+}
+
+.basket__item:not(:last-child) {
+  margin-bottom: 31px;
+}
+
+.basket__footer {
+  padding-top: 20px;
+  padding-bottom: 27px;
+  border-top: 1px solid #D58C51;
+}
+
+.flexbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.basket__footerMsg {
+  font-family: 'Montserrat Regular';
+  font-size: 21px;
+  line-height: 26px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.basket__footerTotal {
+  font-size: 18px;
+  line-height: 22px;
+  color: #D58C51;
+}

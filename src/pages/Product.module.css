@@ -1,0 +1,58 @@
+.product {
+  height: 100vh;
+  padding: 52px 70px 108px;
+  color: #fff;
+  background-image: url(/public/images/background_product.png);
+}
+
+.product__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.product__main {
+  display: flex;
+  align-items: center;
+}
+
+.product__img {
+  width: 35vw;
+  max-width: 500px;
+  height: fit-content;
+  margin-right: 199px;
+}
+
+.product__title {
+  margin-bottom: 21px;
+  font-family: 'Montserrat Medium';
+  font-size: 30px;
+  line-height: 37px;
+  color: #D58C51;
+}
+
+.product__description {
+  margin-bottom: 60px;
+  font-family: 'Montserrat Regular';
+  font-size: 14px;
+  line-height: 17px;
+  color: #fff;
+}
+
+.product__footer {
+  display: flex;
+  align-items: center;
+}
+
+.product__footerPrice {
+  font-family: 'Montserrat Medium';
+  font-size: 23px;
+  line-height: 28px;
+}
+
+.product__footerWeight {
+  margin-right: 68px;
+  font-family: 'Montserrat Regular';
+  font-size: 18px;
+  line-height: 22px;
+}

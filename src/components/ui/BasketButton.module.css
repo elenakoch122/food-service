@@ -1,0 +1,17 @@
+.header__basketButton {
+  margin-right: 22px;
+  padding: 13px 15px;
+  background-color: #D58C51;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.header__basketButton:hover {
+  background-color: #fff;
+}
+
+.header__basketButton:hover > svg path {
+  stroke: #D58C51;
+}

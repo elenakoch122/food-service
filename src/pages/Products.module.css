@@ -1,0 +1,36 @@
+.container {
+  position: relative;
+  margin: 48px 68px 67px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 75px;
+}
+
+.header__title {
+  font-family: 'Montserrat Bold';
+  font-size: 31px;
+  line-height: 38px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.modal {
+  position: absolute;
+  top: 20vh;
+  left: 30vw;
+  padding: 20px 40px;
+  font-family: 'Montserrat Bold';
+  font-size: 24px;
+  background-color: #161516;
+  color: #D58C51;
+  border: 1px solid #D58C51;
+  text-align: center;
+}
+
+.modal__text {
+  margin-bottom: 20px;
+}

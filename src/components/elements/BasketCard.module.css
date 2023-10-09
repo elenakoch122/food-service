@@ -1,0 +1,28 @@
+.basket__card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.basket__cardDescription {
+  display: flex;
+  align-items: center;
+}
+
+.basket__cardImg {
+  width: 122px;
+  height: 122px;
+  margin-right: 98px;
+}
+
+.basket__cardTitle {
+  flex: 1;
+  margin-right: 65px;
+  color: #fff;
+}
+
+.basket__cardPrice {
+  margin-right: 15px;
+  color: #D58C51;
+}
