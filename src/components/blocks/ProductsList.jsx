@@ -7,14 +7,9 @@ function ProductsList() {
 
   return (
     <main className={style.main}>
-      {products.map(product => {
-        return(
-          <Card
-            product={product}
-            key={product.id}
-          />
-        );
-      })}
+      {products.map(product => (
+        <Card product={product} key={product.id} />
+      ))}
     </main>
   );
 }

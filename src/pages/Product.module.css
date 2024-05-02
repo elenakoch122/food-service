@@ -2,7 +2,9 @@
   height: 100vh;
   padding: 52px 70px 108px;
   color: #fff;
-  background-image: url(/public/images/background_product.png);
+  background-image: url(../assets/images/background_product.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .product__header {

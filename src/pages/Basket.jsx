@@ -60,16 +60,11 @@ function Basket() {
         <div className={style.basket__wrapper}>
           <ul className={style.basket__list}>
 
-            {productsBasket.map(product => {
-              return (
-                <li className={style.basket__item}>
-                  <BasketCard
-                    product={product}
-                    key={product.idUnic}
-                  />
-                </li>
-              );
-            })}
+            {productsBasket.map(product => (
+              <li className={style.basket__item} key={product.idUnic}>
+                <BasketCard product={product} />
+              </li>
+            ))}
 
           </ul>
         </div>
