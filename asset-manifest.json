@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/food-service/static/css/main.89e3040a.css",
+    "main.js": "/food-service/static/js/main.c2ed1ca0.js",
+    "static/js/787.3adb45fa.chunk.js": "/food-service/static/js/787.3adb45fa.chunk.js",
+    "static/media/background_main.png": "/food-service/static/media/background_main.36510e5cb68b32ccf0b7.png",
+    "static/media/background_product.png": "/food-service/static/media/background_product.37adbc0f4405a6ce1a5c.png",
+    "static/media/1_big.png": "/food-service/static/media/1_big.2fca0fde6d4eb1a3cb4b.png",
+    "static/media/2_big.png": "/food-service/static/media/2_big.5867d5a08db2be60fe5e.png",
+    "static/media/3_big.png": "/food-service/static/media/3_big.dd8a555614b78b54a4b8.png",
+    "static/media/Montserrat-Regular.eot": "/food-service/static/media/Montserrat-Regular.3220cdd4dbb981ac0882.eot",
+    "static/media/Montserrat-Regular.ttf": "/food-service/static/media/Montserrat-Regular.317b418ed317e258b173.ttf",
+    "static/media/Montserrat-Bold.eot": "/food-service/static/media/Montserrat-Bold.4b33f3d37c06db49a761.eot",
+    "static/media/Montserrat-Bold.ttf": "/food-service/static/media/Montserrat-Bold.5885feb264991825e67f.ttf",
+    "static/media/Montserrat-Medium.eot": "/food-service/static/media/Montserrat-Medium.418e43db3ef66b97a7ef.eot",
+    "static/media/Montserrat-Medium.ttf": "/food-service/static/media/Montserrat-Medium.693c527aec0de211945e.ttf",
+    "static/media/Montserrat-Light.eot": "/food-service/static/media/Montserrat-Light.d66eb8ddfd61f1ea2f5d.eot",
+    "static/media/Montserrat-Light.ttf": "/food-service/static/media/Montserrat-Light.c3468d41e1e1edd98ca0.ttf",
+    "static/media/1.png": "/food-service/static/media/1.8783babaabdbaf95c166.png",
+    "static/media/Montserrat-Bold.woff": "/food-service/static/media/Montserrat-Bold.180ba33d8de7dcfe80a0.woff",
+    "static/media/Montserrat-Regular.woff": "/food-service/static/media/Montserrat-Regular.3db65dc4b858f0fed4fb.woff",
+    "static/media/Montserrat-Medium.woff": "/food-service/static/media/Montserrat-Medium.d42dad28f6470e5162c2.woff",
+    "static/media/Montserrat-Light.woff": "/food-service/static/media/Montserrat-Light.be142e6c3747b7b87e60.woff",
+    "static/media/2.png": "/food-service/static/media/2.3a2992bfa05847ec3d97.png",
+    "static/media/3.png": "/food-service/static/media/3.25dae6a2421ed90b63d1.png",
+    "index.html": "/food-service/index.html",
+    "main.89e3040a.css.map": "/food-service/static/css/main.89e3040a.css.map",
+    "main.c2ed1ca0.js.map": "/food-service/static/js/main.c2ed1ca0.js.map",
+    "787.3adb45fa.chunk.js.map": "/food-service/static/js/787.3adb45fa.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.89e3040a.css",
+    "static/js/main.c2ed1ca0.js"
+  ]
+}
