@@ -46,7 +46,7 @@ const router = createBrowserRouter([
     path: "/product/:id",
     element: <Product />
   }
-], { basename: "/food-service" });
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
