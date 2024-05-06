@@ -4,4 +4,6 @@
   gap: 35px 20px;
   height: calc(100vh - 240px);
   overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #161516 #D58C51;
 }
