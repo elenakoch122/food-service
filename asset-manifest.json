@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/food-service/static/css/main.89e3040a.css",
-    "main.js": "/food-service/static/js/main.c2ed1ca0.js",
+    "main.css": "/food-service/static/css/main.2d2cd565.css",
+    "main.js": "/food-service/static/js/main.4087751d.js",
     "static/js/787.3adb45fa.chunk.js": "/food-service/static/js/787.3adb45fa.chunk.js",
     "static/media/background_main.png": "/food-service/static/media/background_main.36510e5cb68b32ccf0b7.png",
     "static/media/background_product.png": "/food-service/static/media/background_product.37adbc0f4405a6ce1a5c.png",
@@ -24,12 +24,12 @@
     "static/media/2.png": "/food-service/static/media/2.3a2992bfa05847ec3d97.png",
     "static/media/3.png": "/food-service/static/media/3.25dae6a2421ed90b63d1.png",
     "index.html": "/food-service/index.html",
-    "main.89e3040a.css.map": "/food-service/static/css/main.89e3040a.css.map",
-    "main.c2ed1ca0.js.map": "/food-service/static/js/main.c2ed1ca0.js.map",
+    "main.2d2cd565.css.map": "/food-service/static/css/main.2d2cd565.css.map",
+    "main.4087751d.js.map": "/food-service/static/js/main.4087751d.js.map",
     "787.3adb45fa.chunk.js.map": "/food-service/static/js/787.3adb45fa.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.89e3040a.css",
-    "static/js/main.c2ed1ca0.js"
+    "static/css/main.2d2cd565.css",
+    "static/js/main.4087751d.js"
   ]
 }
