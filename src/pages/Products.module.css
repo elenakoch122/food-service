@@ -12,7 +12,8 @@
 
 .header__title {
   font-family: 'Montserrat Bold';
-  font-size: 31px;
+  /* font-size: 31px; */
+  font-size: 1.9rem;
   line-height: 38px;
   color: #fff;
   text-transform: uppercase;
@@ -33,4 +34,14 @@
 
 .modal__text {
   margin-bottom: 20px;
+}
+
+@media (max-width: 425px) {
+  .container {
+    margin: 48px 68px 67px;
+  }
+
+  .header__title {
+    font-size: 1.5rem;
+  }
 }

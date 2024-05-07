@@ -4,6 +4,7 @@ import HeaderBasket from '../components/blocks/HeaderBasket';
 import ProductsList from '../components/blocks/ProductsList';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
+import Header from '../components/elements/Header';
 
 function Products() {
   document.title = 'Наша продукция';
@@ -36,6 +37,7 @@ function Products() {
         <HeaderBasket />
       </header>
 
+      {/* <Header type="products" /> */}
       <ProductsList />
 
       <dialog className={style.modal} id="modal">
