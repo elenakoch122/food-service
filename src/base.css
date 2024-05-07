@@ -1,4 +1,5 @@
 html {
+  font-size: 16px;
   scroll-behavior: smooth;
 }
 
@@ -45,7 +46,8 @@ a:focus {
 .error_common {
   position: absolute;
   top: 24px;
-  left: 152px;
+  left: 50%;
+  translate: -50%;
 }
 
 .error_input {
