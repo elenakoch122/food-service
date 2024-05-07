@@ -1,65 +1,98 @@
 import style from './Form.module.css';
+import { useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { setAuth, setUser } from '../../store/reducers/auth';
 import Button from '../ui/Button';
 import checkForm from '../../checkForm';
-import { Link, useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
 
-function Form({ link, title, button }) {
-  let url;
-  link === 'Зарегистрироваться' ? url = '/registration' : url = '/';
-
+export default function Form({ link, title, button }) {
+  const { currentUser, isAuthorized } = useSelector(state => state.auth);
+  const dispatch = useDispatch();
   const navigate = useNavigate();
-  const goProducts = () => navigate('/products');
-  let isAuthorized = JSON.parse(localStorage.getItem('isAuthorized')) || false;
+
+  const url = link === 'Зарегистрироваться' ? '/registration' : '/';
+
+  useEffect(() => {
+    const checkbox = document.getElementById('check');
+    title === 'Вход' ? checkbox.setAttribute('disabled', '') : checkbox.removeAttribute('disabled');
+  }, [title]);
+
+  const onChangeInput = (e) => {
+    const { name } = e.target;    
+    name === 'isAgree' ? (
+      dispatch(setUser({ name, value: e.target.checked }))
+    ) : (
+      dispatch(setUser({ name, value: e.target.value }))
+    );
+  };
+
+  const goProducts = () => navigate('/');
 
   const checkAuthorization = () => {
     if (isAuthorized) goProducts();
   };
 
-  useEffect(() => checkAuthorization(), []);
-
   const validate = (e) => {
     e.preventDefault();
-    isAuthorized = checkForm(e.target);
+    dispatch(setAuth(checkForm(e.target, currentUser)));
     checkAuthorization();
-  };
-
-  useEffect(() => {
-    const checkbox = document.getElementById('check');
-    const isAuthForm = document.querySelector('h1').textContent === 'Вход';
-
-    isAuthForm ? checkbox.setAttribute('disabled', '') : checkbox.removeAttribute('disabled');
-  });
+  };  
 
   return (
-    <form className={style.form} noValidate onSubmit={validate}>
+    <div className={style.entry}>
+      <form className={style.form} noValidate onSubmit={validate}>
+        <Link to={url} className={style.form__link}>{link}</Link>
+        <h1 className={style.form__title}>{title}</h1>
 
-      <Link to={url} className={style.form__link}>{link}</Link>
+        <div className={style.form__inputWrapper}>
+          <input
+            className={style.form__input}
+            id="login"
+            type="text"
+            name="login"
+            placeholder="Логин"
+            minLength="4"
+            value={currentUser.login}
+            onChange={onChangeInput}
+            required
+          />
+        </div>
 
-      <h1 className={style.form__title}>{title}</h1>
+        <div className={style.form__inputWrapper}>
+          <input
+            className={style.form__input}
+            id="password"
+            type="password"
+            name="password"
+            placeholder="Пароль"
+            minLength="4"
+            value={currentUser.password}
+            onChange={onChangeInput}
+            required
+          />
+        </div>
 
-      <div className={style.form__inputWrapper}>
-        <input className={style.form__input} id="login" type="text" name="email" placeholder="Логин" minLength="4" required />
-      </div>
+        <div className={style.form__agree}>
+          <input
+            className={style.form__agreeCheck}
+            id="check"
+            type="checkbox"
+            name="isAgree"
+            checked={currentUser.isAgree}
+            onChange={onChangeInput}
+          />
 
-      <div className={style.form__inputWrapper}>
-        <input className={style.form__input} id="password" type="password" name="password" placeholder="Пароль" minLength="4" required />
-      </div>
+          <label className={style.form__agreeLabel} htmlFor="check">
+            <span className={style.form__agreeText}>Я согласен получать обновления на почту</span>
+          </label>
+        </div>
 
-      <div className={style.form__agree}>
-        <input className={style.form__agreeCheck} id="check" type="checkbox" name="agree" />
-        <label className={style.form__agreeLabel} htmlFor="check">
-          <span className={style.form__agreeText}>Я согласен получать обновления на почту</span>
-        </label>
-      </div>
-
-      <Button
-        text={button}
-        backgroundColor="#D58C51"
-      />
-
-    </form>
+        <Button
+          text={button}
+          backgroundColor="#D58C51"
+        />
+      </form>
+    </div>
   );
 }
-
-export default Form;

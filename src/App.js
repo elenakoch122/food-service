@@ -1,16 +1,18 @@
-import './assets/fonts/fonts.css'
-import './reset.css';
-import './base.css';
 import './App.css'
-import { Outlet } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
+import Products from './pages/Products';
+import Form from './components/blocks/Form';
 
-function App() {
-  document.title = 'Вход/регистрация';
-  return (
-    <main className="main">
-      <Outlet />
-    </main>
-  );
+export default function  App() {
+  const { isAuthorized } = useSelector(state => state.auth);
+  const [content, setContent] = useState(null);
+
+  document.title = isAuthorized ? 'Наша продукция' : 'Вход/регистрация';
+
+  useEffect(() => {
+    isAuthorized ? setContent(<Products />) : setContent(<Form link="Зарегистрироваться" title="Вход" button="Войти" />);
+  }, [isAuthorized]);
+
+  return content;
 }
-
-export default App;

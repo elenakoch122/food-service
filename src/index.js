@@ -1,42 +1,30 @@
-import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import reportWebVitals from './reportWebVitals';
-import { Provider } from 'react-redux';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { store } from './store/store';
+import reportWebVitals from './reportWebVitals';
+import './assets/fonts/fonts.css'
+import './reset.css';
+import './base.css';
+import './index.css';
 import App from './App';
-import Products from './pages/Products';
+import Form from './components/blocks/Form';
 import Basket from './pages/Basket';
 import Product from './pages/Product';
-import Form from './components/blocks/Form';
-import { store } from './store/store';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    children: [
-      {
-        path: "/",
-        element: <Form
-          link="Зарегистрироваться"
-          title="Вход"
-          button="Войти"
-        />,
-      },
-      {
-        path: "/registration",
-        element: <Form
-          link="Авторизоваться"
-          title="Регистрация"
-          button="Зарегистрироваться"
-        />,
-      },
-    ]
   },
   {
-    path: "/products",
-    element: <Products />,
+    path: "/registration",
+    element: <Form
+      link="Авторизоваться"
+      title="Регистрация"
+      button="Зарегистрироваться"
+    />,
   },
   {
     path: "/basket",

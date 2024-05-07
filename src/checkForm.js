@@ -1,49 +1,39 @@
 const minLoginPasswordLength = 4;
 const users = JSON.parse(localStorage.getItem('users')) || [];
-let login, password, checkbox, isValid;
+let isValid;
 
-export default function checkForm(form) {
-  login = document.getElementById('login');
-  password = document.getElementById('password');
-  checkbox = document.getElementById('check');
+export default function checkForm(form, user) {
   isValid = false;
 
   [...form.elements].forEach((el) => check(el));
 
   if (form.checkValidity()) {
-    form.querySelector('h1').textContent === 'Вход' ? logIn() : register();
+    form.querySelector('h1').textContent === 'Вход' ? logIn(user) : register(user);
   }
 
   return isValid;
 }
 
-function register() {
-  const user = {
-    login: login.value,
-    password: password.value,
-    isAgree: checkbox.checked
-  };
-
-  const sameUser = users.find(item => item.login === user.login);
+function register(currentUser) {
+  const sameUser = users.find(user => user.login === currentUser.login);
 
   if (sameUser) {
-    sameUser.password = user.password;
-    sameUser.isAgree = user.isAgree;
+    return addError('impossible register');
   } else {
-    users.push(user);
+    users.push(currentUser);
+    localStorage.setItem('users', JSON.stringify(users));
+    localStorage.setItem('currentUser', JSON.stringify(currentUser));
   }
 
   isValid = true;
-  localStorage.setItem('users', JSON.stringify(users));
-  localStorage.setItem('isAuthorized', JSON.stringify(isValid));
 }
 
-function logIn() {
-  const currentUser = users.find((user) => user.login === login.value && user.password === password.value);
+function logIn(currentUser) {
+  const sameUser = users.find(user => user.login === currentUser.login && user.password === currentUser.password);
 
-  if (currentUser) {
+  if (sameUser) {
     isValid = true;
-    localStorage.setItem('isAuthorized', JSON.stringify(isValid));
+    localStorage.setItem('currentUser', JSON.stringify(currentUser));
   } else {
     isValid = false;
     addError('invalid data');
@@ -71,7 +61,7 @@ function check(elem) {
 function addError(errorName, elem = null) {
   const type = elem && elem.tagName === 'INPUT' ? 'input' : 'common';
 
-  if (!elem) elem = checkbox;
+  if (!elem) elem = document.getElementById('check');
 
   let error = elem.parentElement.querySelector('.error');
 
@@ -96,6 +86,8 @@ function errorText(errorType) {
       return `Логин должен содержать не менее ${minLoginPasswordLength} символов`;
     case 'small password':
       return `Пароль должен содержать не менее ${minLoginPasswordLength} символов`;
+    case 'impossible register':
+      return `Такой пользователь уже зарегистрирован.`;
     default:
       return 'Поле не должно быть пустым';
   }

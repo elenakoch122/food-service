@@ -1,14 +1,15 @@
 import style from './Basket.module.css';
+import { useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from 'react-redux';
+import { removeAllProducts } from '../store/reducers/products';
+import { icons } from '../icons';
 import Button from '../components/ui/Button';
 import ButtonRound from '../components/ui/ButtonRound';
 import BasketCard from '../components/elements/BasketCard';
-import { icons } from '../icons';
-import { removeAllProducts } from '../store/reducers/products';
-import { useNavigate } from "react-router-dom";
-import { useSelector, useDispatch } from 'react-redux';
-import { useEffect } from 'react';
+import { removeCurrentUser, setAuth } from '../store/reducers/auth';
 
-function Basket() {
+export default function Basket() {
   document.title = 'Корзина';
 
   const productsBasket = useSelector(state => state.products.basketProducts);
@@ -22,7 +23,8 @@ function Basket() {
   const goHome = () => navigate('/');
 
   const exit = () => {
-    localStorage.setItem('isAuthorized', false);
+    dispatch(setAuth(false));
+    dispatch(removeCurrentUser());
     dispatch(removeAllProducts());
     goHome();
   };
@@ -86,5 +88,3 @@ function Basket() {
     </div>
   );
 }
-
-export default Basket;

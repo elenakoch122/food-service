@@ -1,17 +1,18 @@
 import style from './HeaderBasket.module.css';
-import Button from '../ui/Button';
-import BasketButton from '../ui/BasketButton';
-import { removeAllProducts } from '../../store/reducers/products';
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
+import { removeCurrentUser, setAuth } from '../../store/reducers/auth';
+import { removeAllProducts } from '../../store/reducers/products';
+import Button from '../ui/Button';
+import BasketButton from '../ui/BasketButton';
 
-function HeaderBasket() {
-  const count = useSelector(state => state.products.count);
-  const sum = useSelector(state => state.products.sum);
+export default function HeaderBasket() {
+  const { count, sum } = useSelector(state => state.products);
   const dispatch = useDispatch();
 
   const exit = () => {
-    localStorage.setItem('isAuthorized', false);
+    dispatch(setAuth(false));
+    dispatch(removeCurrentUser());
     dispatch(removeAllProducts());
   }
 
@@ -36,5 +37,3 @@ function HeaderBasket() {
     </div>
   );
 }
-
-export default HeaderBasket;
