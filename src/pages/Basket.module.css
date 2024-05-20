@@ -1,23 +1,6 @@
-.basket__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 53px 70px 38px;
-}
-
 .basket__wrapper {
   width: 860px;
   margin: 0 auto;
-}
-
-.basket__title {
-  flex: 1;
-  margin-left: 63px;
-  font-family: 'Montserrat Bold';
-  font-size: 31px;
-  line-height: 38px;
-  color: #fff;
-  text-transform: uppercase;
 }
 
 .basket__content {

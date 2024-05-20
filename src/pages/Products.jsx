@@ -1,10 +1,9 @@
 import style from './Products.module.css';
-import Button from '../components/ui/Button';
-import HeaderBasket from '../components/blocks/HeaderBasket';
-import ProductsList from '../components/blocks/ProductsList';
-import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Header from '../components/elements/Header';
+import ProductsList from '../components/blocks/ProductsList';
+import Button from '../components/ui/Button';
 
 function Products() {
   document.title = 'Наша продукция';
@@ -32,12 +31,7 @@ function Products() {
 
   return (
     <div className={style.container}>
-      <header className={style.header}>
-        <h1 className={style.header__title}>Наша продукция</h1>
-        <HeaderBasket />
-      </header>
-
-      {/* <Header type="products" /> */}
+      <Header type="products" title="Наша продукция" />
       <ProductsList />
 
       <dialog className={style.modal} id="modal">

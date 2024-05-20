@@ -3,11 +3,10 @@ import { useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
 import { removeAllProducts } from '../store/reducers/products';
-import { icons } from '../icons';
-import Button from '../components/ui/Button';
-import ButtonRound from '../components/ui/ButtonRound';
-import BasketCard from '../components/elements/BasketCard';
 import { removeCurrentUser, setAuth } from '../store/reducers/auth';
+import Header from '../components/elements/Header';
+import BasketCard from '../components/elements/BasketCard';
+import Button from '../components/ui/Button';
 
 export default function Basket() {
   document.title = 'Корзина';
@@ -41,22 +40,7 @@ export default function Basket() {
 
   return (
     <div className={style.basket}>
-      <header className={style.basket__header}>
-        <ButtonRound
-          icon={icons.arrowBack}
-          color="#D58C51"
-          width="32"
-          callback={() => navigate(-1)}
-        />
-
-        <h1 className={style.basket__title}>Корзина с выбранными товарами</h1>
-
-        <Button
-          text='Выйти'
-          backgroundColor='transparent'
-          callback={exit}
-        />
-      </header>
+      <Header type="basket" title="Корзина"/>
 
       <main className={style.basket__content}>
         <div className={style.basket__wrapper}>

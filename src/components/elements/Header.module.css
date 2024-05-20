@@ -1,15 +1,66 @@
-/* .header {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 75px;
-} */
+}
 
-/* .header__title {
-  font-family: 'Montserrat Bold'; */
+.products {
+  margin-bottom: 75px;
+}
+
+.product {
+  margin-bottom: 25px;
+}
+
+.basket {
+  margin: 53px 70px 38px;
+}
+
+.basket .header__title__wrapper button {
+  margin-right: 63px;
+}
+
+.header__title__wrapper {
+  display: flex;
+}
+
+.header__title {
+  font-family: 'Montserrat Bold';
   /* font-size: 31px; */
-  /* font-size: 1.9rem;
+  font-size: 1.9rem;
   line-height: 38px;
   color: #fff;
   text-transform: uppercase;
-} */
+}
+
+.header__actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order {
+  margin-right: 20px;
+  text-align: right;
+}
+
+.order p {
+  font-family: 'Montserrat Medium';
+  font-size: 17px;
+  line-height: 21px;
+  color: #fff;
+}
+
+@media (max-width: 880px) {
+  .products {
+    margin-bottom: 30px;
+  }
+
+  .header__title {
+    font-size: 1.5rem;
+  }
+
+  .basket .header__title__wrapper button {
+    margin-right: 25px;
+  }
+}

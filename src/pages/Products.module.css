@@ -12,7 +12,6 @@
 
 .header__title {
   font-family: 'Montserrat Bold';
-  /* font-size: 31px; */
   font-size: 1.9rem;
   line-height: 38px;
   color: #fff;
@@ -36,12 +35,26 @@
   margin-bottom: 20px;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 880px) {
   .container {
-    margin: 48px 68px 67px;
+    margin: 30px 45px;
+  }
+
+  .header {
+    margin-bottom: 30px;
   }
 
   .header__title {
     font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 635px) {
+  
+}
+
+@media (max-width: 425px) {
+  .container {
+    margin: 48px 68px 67px;
   }
 }

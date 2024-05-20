@@ -1,13 +1,11 @@
 import style from './Product.module.css';
-import Button from '../components/ui/Button';
-import ButtonRound from '../components/ui/ButtonRound';
-import HeaderBasket from '../components/blocks/HeaderBasket';
-import uuid from 'react-uuid';
-import { icons } from '../icons';
-import { addProductInBasket } from '../store/reducers/products';
-import { useSelector, useDispatch } from 'react-redux';
-import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { addProductInBasket } from '../store/reducers/products';
+import uuid from 'react-uuid';
+import Header from '../components/elements/Header';
+import Button from '../components/ui/Button';
 
 function Product() {
   const dispatch = useDispatch();
@@ -38,16 +36,7 @@ function Product() {
 
   return (
     <div className={style.product}>
-      <header className={style.product__header}>
-        <ButtonRound
-          icon={icons.arrowBack}
-          color="#D58C51"
-          width="32"
-          callback={() => navigate(-1)}
-        />
-
-        <HeaderBasket />
-      </header>
+      <Header type="product" />
 
       <main className={style.product__main}>
         <img className={style.product__img} src={product.urlBig} alt={product.imgDescription} />
