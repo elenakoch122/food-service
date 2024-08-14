@@ -43,13 +43,15 @@ function Product() {
         <div>
           <h1 className={style.product__title}>{product.title}</h1>
           <p className={style.product__description}>{product.descriptionFull}</p>
+          
           <div className={style.product__footer}>
             <span className={style.product__footerPrice}>{product.price.toLocaleString('ru-RU')} ₽ </span>
             <span className={style.product__footerWeight}>/ {product.weight}</span>
 
             <Button
-              text='В корзину'
-              backgroundColor='#D58C51'
+              text="В корзину"
+              backgroundColor="orange"
+              color="dark"
               callback={addProduct}
             />
           </div>

@@ -90,7 +90,8 @@ export default function Form({ link, title, button }) {
 
         <Button
           text={button}
-          backgroundColor="#D58C51"
+          backgroundColor="orange"
+          color="dark"
         />
       </form>
     </div>

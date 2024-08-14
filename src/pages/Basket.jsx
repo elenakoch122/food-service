@@ -3,7 +3,6 @@ import { useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
 import { removeAllProducts } from '../store/reducers/products';
-import { removeCurrentUser, setAuth } from '../store/reducers/auth';
 import Header from '../components/elements/Header';
 import BasketCard from '../components/elements/BasketCard';
 import Button from '../components/ui/Button';
@@ -20,13 +19,6 @@ export default function Basket() {
   let isAuthorized = JSON.parse(localStorage.getItem('isAuthorized')) || false;
 
   const goHome = () => navigate('/');
-
-  const exit = () => {
-    dispatch(setAuth(false));
-    dispatch(removeCurrentUser());
-    dispatch(removeAllProducts());
-    goHome();
-  };
 
   const order = () => {
     localStorage.setItem('isOrdered', true);
@@ -62,9 +54,11 @@ export default function Basket() {
             Заказ на сумму:&nbsp;
             <span className={style.basket__footerTotal}>{sum.toLocaleString('ru-RU')} ₽</span>
           </p>
+          
           <Button
-            text='Оформить заказ'
-            backgroundColor='#D58C51'
+            text="Оформить заказ"
+            backgroundColor="orange"
+            color="dark"
             callback={order}
           />
         </div>

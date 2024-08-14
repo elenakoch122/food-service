@@ -26,7 +26,6 @@
 
 .header__title {
   font-family: 'Montserrat Bold';
-  /* font-size: 31px; */
   font-size: 1.9rem;
   line-height: 38px;
   color: #fff;
@@ -35,12 +34,11 @@
 
 .header__actions {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  column-gap: 20px;
 }
 
 .order {
-  margin-right: 20px;
   text-align: right;
 }
 

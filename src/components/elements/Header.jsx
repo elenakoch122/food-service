@@ -6,8 +6,6 @@ import { removeCurrentUser, setAuth } from '../../store/reducers/auth';
 import { removeAllProducts } from '../../store/reducers/products';
 import { icons } from '../../icons';
 import Button from '../ui/Button';
-import BasketButton from '../ui/BasketButton';
-import ButtonRound from '../ui/ButtonRound';
 
 export default function Header({ type, title }) {
   const { count, sum } = useSelector(state => state.products);
@@ -34,11 +32,11 @@ export default function Header({ type, title }) {
   return (
     <header className={`${style.header} ${style[type]}`}>
       <div className={style.header__title__wrapper}>
-        {type !== 'products' && <ButtonRound
-          icon={icons.arrowBack}
-          color="#D58C51"
-          width="32"
+        {type !== 'products' && <Button
+          type="round"
+          text={icons.arrowBack}
           callback={() => navigate(-1)}
+          width="32"  
         />}
         
         {title && <h1 className={style.header__title}>{title}</h1>}                
@@ -51,13 +49,17 @@ export default function Header({ type, title }) {
         </div>
 
         <Link to={'/basket'}>
-          <BasketButton />
+          <Button
+            type="round"
+            text={icons.basket}
+            backgroundColor="orange"
+            width="51"
+          />
         </Link>
 
         <Link to={'/'}>
           <Button
             text={isTextButton ? 'Выйти' : icons.exit} 
-            backgroundColor='transparent'
             callback={exit}
           />
         </Link>

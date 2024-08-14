@@ -1,10 +1,10 @@
-import { icons } from '../../icons';
 import style from './Card.module.css';
-import ButtonRound from '../ui/ButtonRound';
-import uuid from 'react-uuid';
-import { addProductInBasket } from '../../store/reducers/products';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { addProductInBasket } from '../../store/reducers/products';
+import { icons } from '../../icons';
+import uuid from 'react-uuid';
+import Button from '../ui/Button';
 
 function Card({ product }) {
   const dispatch = useDispatch();
@@ -28,7 +28,9 @@ function Card({ product }) {
       onClick={cardInside}
     >
       <div className={style.card__main}>
-        <img className={style.card__img} src={product.url} alt={product.imgDescription} />
+        <div className={style.card__img__wrapper}>
+          <img className={style.card__img} src={product.url} alt={product.imgDescription} />
+        </div>
         <h2 className={style.card__title}>{product.title}</h2>
         <p className={style.card__description}>{product.description}</p>
       </div>
@@ -38,11 +40,14 @@ function Card({ product }) {
           <span className={style.card__footerPrice}>{product.price.toLocaleString('ru-RU')} ₽ </span>
           <span className={style.card__footerWeight}>/ {product.weight}</span>
         </div>
-        <ButtonRound
-          icon={icons.add}
-          color="#fff"
-          width="31"
+
+        <Button
+          type="round"
+          text={icons.add}
+          borderColor="white"
+          color="white"
           callback={addProduct}
+          width="31"
         />
       </div>
     </div>

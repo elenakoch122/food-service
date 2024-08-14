@@ -1,28 +1,100 @@
 .button {
+  border: 1px solid;
+  transition: .3s;
+  cursor: pointer;
+}
+
+
+/* type */
+.button_rectangle {
   width: 200px;
   padding: 12px 0;
   font-family: 'Montserrat Regular';
   font-size: 14px;
   line-height: 17px;
-  transition: .3s;
 }
 
-.button_orange {
+.button_round {
+  padding: 8px;
+  line-height: 0;
+  border-radius: 50%;
+}
+
+
+
+/* color */
+.button_color-orange {
+  color: #D58C51;
+}
+
+.button_color-white {
+  color: #fff;
+}
+
+.button_color-dark {
   color: #131313;
+}
+
+
+
+/* background-color */
+.button_bgc-transparent {
+  background-color: transparent;  
+}
+
+.button_bgc-transparent:hover {
+  color: #fff;
+  border-color: #fff;
+}
+
+.button_bgc-orange {
   background-color: #D58C51;
 }
 
-.button_orange:hover {
+.button_bgc-orange:hover {
   color: #fff;
 }
 
-.button_transparent {
-  color: #D58C51;
-  background-color: transparent;
-  border: 1px solid #D58C51;
+.button_round.button_bgc-orange:hover {
+  background-color: #fff;
 }
 
-.button_transparent:hover {
-  color: #fff;
+.button_round.button_bgc-orange:hover > svg path {
+  stroke: #D58C51;
+}
+
+
+
+/* border-color */
+.button_bdc-orange {
+  border-color: #D58C51;
+}
+
+.button_round.button_bdc-orange:hover {
   border-color: #fff;
+}
+
+.button_bgc-transparent.button_bdc-orange:hover {
+  border-color: #fff;
+}
+
+.button_bgc-transparent.button_bdc-orange:hover > svg path {
+  stroke: #fff;
+}
+
+.button_bdc-white {
+  border-color: #fff;
+}
+
+.button_round.button_bdc-white:hover {
+  border-color: #D58C51;
+  background-color: #D58C51;
+}
+
+
+
+@media (max-width: 880px) {
+  .button {
+    width: 50px;
+  }
 }

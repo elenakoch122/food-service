@@ -1,9 +1,9 @@
 import { icons } from '../../icons';
 import style from './BasketCard.module.css';
-import ButtonRound from '../ui/ButtonRound';
 import { removeProductFromBasket } from '../../store/reducers/products';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import Button from '../ui/Button';
 
 function BasketCard({ product }) {
   const dispatch = useDispatch();
@@ -25,11 +25,11 @@ function BasketCard({ product }) {
       <h2 className={style.basket__cardTitle}>{product.title}</h2>
       <div>
         <span className={style.basket__cardPrice}>{product.price.toLocaleString('ru-RU')} ₽</span>
-        <ButtonRound
-          icon={icons.cancel}
-          color="#D58C51"
-          width="30"
+        <Button
+          type="round"
+          text={icons.cancel}
           callback={removeProduct}
+          width="30"
         />
       </div>
     </div>
