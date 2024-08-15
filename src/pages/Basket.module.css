@@ -7,6 +7,8 @@
   height: calc(100vh - 320px);
   margin-bottom: 102px;
   overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #161516 #D58C51;
 }
 
 .basket__item:not(:last-child) {

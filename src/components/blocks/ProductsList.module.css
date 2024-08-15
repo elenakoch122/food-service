@@ -2,8 +2,19 @@
   display: flex;
   flex-wrap: wrap;
   gap: 35px 20px;
-  height: calc(100vh - 240px);
-  overflow-y: scroll;
-  scrollbar-width: thin;
-  scrollbar-color: #161516 #D58C51;
+}
+
+@media (max-width: 635px) {
+  .main {
+    display: block;
+  }
+}
+
+@media (min-width: 636px) {
+  .main {
+    height: calc(100vh - 240px);
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #161516 #D58C51;
+  }
 }
