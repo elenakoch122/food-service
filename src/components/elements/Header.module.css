@@ -13,7 +13,8 @@
 }
 
 .basket {
-  margin: 53px 70px 38px;
+  margin: 53px auto 38px;
+  max-width: 860px;
 }
 
 .basket .header__title__wrapper button {
@@ -25,6 +26,7 @@
 }
 
 .header__title {
+  margin-right: 15px;
   font-family: 'Montserrat Bold';
   font-size: 1.9rem;
   line-height: 38px;
@@ -56,6 +58,11 @@
 
   .header__title {
     font-size: 1.5rem;
+  }
+
+  .basket {
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
   .basket .header__title__wrapper button {

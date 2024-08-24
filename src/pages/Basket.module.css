@@ -1,5 +1,5 @@
 .basket__wrapper {
-  width: 860px;
+  max-width: 860px;
   margin: 0 auto;
 }
 
@@ -39,4 +39,11 @@
   font-size: 18px;
   line-height: 22px;
   color: #D58C51;
+}
+
+@media (max-width: 880px) {
+  .basket__wrapper {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }

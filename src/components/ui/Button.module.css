@@ -92,9 +92,13 @@
 }
 
 
-
+/* менять вид кнопки выйти */
 @media (max-width: 880px) {
   .button {
     width: 50px;
   }
+
+  /* .header__actions:has(.button) {
+    width: 50px;
+  } */
 }

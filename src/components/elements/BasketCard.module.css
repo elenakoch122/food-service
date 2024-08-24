@@ -19,10 +19,45 @@
 .basket__cardTitle {
   flex: 1;
   margin-right: 65px;
+  font-family: 'Montserrat Medium';
+  font-size: 17px;
   color: #fff;
 }
 
 .basket__cardPrice {
   margin-right: 15px;
+  font-family: 'Montserrat Regular';
+  font-size: 18px;
   color: #D58C51;
+}
+
+/* менять вид карточки, сужать */
+@media (max-width: 880px) {
+  .basket__cardImg {
+    margin-right: 4vw;
+  }
+
+  .basket__cardTitle {
+    margin-right: 3vw;
+  }
+}
+
+@media (max-width: 767px) {
+  .basket__card {
+    position: relative;
+  }
+
+  .basket__cardTitle {
+    align-self: flex-start;
+  }
+
+  .basket__cardPrice {
+    position: absolute;
+    bottom: 20px;
+    right: 45px;
+  }
+}
+
+@media (max-width: 450px) {
+/* блоки */
 }
